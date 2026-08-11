@@ -5314,6 +5314,63 @@
                     }
                 ]
             },
+            "deepseek-v4-flash": {
+                "display_info": {
+                    "name": "DeepSeek-V4-Flash-0731",
+                    "description": {
+                        "zh_cn": "DeepSeek V4 Flash 文本模型；官方上下文 1,000,000 Token，最大输出 384,000 Token。",
+                        "en_us": "DeepSeek V4 Flash text model with a 1,000,000-token context window and a 384,000-token maximum output."
+                    },
+                    "output_tokens": 384000,
+                    "max_tokens": 1000000
+                },
+                "capability": {
+                    "function_call": false,
+                    "image_understanding": false,
+                    "video_understanding": false,
+                    "audio_understanding": false,
+                    "support_multi_modal": false
+                },
+                "parameters": [
+                    {
+                        "name": "temperature",
+                        "label": "生成随机性",
+                        "desc": "- **temperature**: 调高温度会使得模型的输出更多样性和创新性，反之，降低温度会使输出内容更加遵循指令要求但减少多样性。建议不要与“Top p”同时调整。",
+                        "type": 1,
+                        "min": "0",
+                        "max": "1",
+                        "precision": 2,
+                        "default_val": {
+                            "default_val": "0.85",
+                            "creative": "0.95",
+                            "balance": "0.85",
+                            "precise": "0.1"
+                        },
+                        "options": [],
+                        "param_class": {
+                            "class_id": 1,
+                            "label": "生成多样性"
+                        }
+                    },
+                    {
+                        "name": "max_tokens",
+                        "label": "最大回复长度",
+                        "desc": "控制模型单次生成的 Token 上限；输入与生成输出共享 1,000,000 Token 上下文预算。",
+                        "type": 2,
+                        "min": "1",
+                        "max": "384000",
+                        "precision": 0,
+                        "default_val": {
+                            "default_val": "384000"
+                        },
+                        "options": [],
+                        "param_class": {
+                            "class_id": 2,
+                            "label": "输入及输出设置"
+                        }
+                    }
+                ]
+            },
             "deepseek-reasoner": {
                 "display_info": {
                     "name": "DeepSeek-R1·工具调用",
