@@ -5325,7 +5325,7 @@
                     "max_tokens": 1000000
                 },
                 "capability": {
-                    "function_call": false,
+                    "function_call": true,
                     "image_understanding": false,
                     "video_understanding": false,
                     "audio_understanding": false,
@@ -5367,6 +5367,40 @@
                         "param_class": {
                             "class_id": 2,
                             "label": "输入及输出设置"
+                        }
+                    },
+                    {
+                        "name": "sp_current_time",
+                        "label": "当前时间",
+                        "desc": "开启后，会在用户的每次query中拼上当前准确时间。[指引文档](http://coze.cn/open/docs/guides/llm#79e75604)",
+                        "type": 3,
+                        "min": "",
+                        "max": "",
+                        "precision": 0,
+                        "default_val": {
+                            "default_val": "false"
+                        },
+                        "options": [],
+                        "param_class": {
+                            "class_id": 5,
+                            "label": "模型默认指令"
+                        }
+                    },
+                    {
+                        "name": "sp_anti_leak",
+                        "label": "SP防泄漏指令",
+                        "desc": "开启后将会加固提示词，显著降低提示词泄露情况的出现概率。[指引文档](http://coze.cn/open/docs/guides/llm#79e75604)",
+                        "type": 3,
+                        "min": "",
+                        "max": "",
+                        "precision": 0,
+                        "default_val": {
+                            "default_val": "false"
+                        },
+                        "options": [],
+                        "param_class": {
+                            "class_id": 5,
+                            "label": "模型默认指令"
                         }
                     }
                 ]
